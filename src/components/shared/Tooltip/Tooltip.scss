@@ -1,0 +1,253 @@
+// Variables color
+$color-content: #FF8C00;
+
+// Tooltip container
+.tooltip {
+	display: inline-block;
+	position: relative;
+	// padding: 7px;
+}
+
+// Tooltip content
+.tooltip-content {
+	padding: 8px;
+	position: absolute;
+	left: 50%;
+	width: 300px;
+	font-weight: 500;
+	font-size: 18px;
+	border-radius: 6px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+	color: #ffffff;
+	background: $color-content;
+	transform: translateX(-50%);
+	transition: opacity .2s ease, visibility .2s ease;
+}
+
+// Tooltip visibility control on hover
+.tooltip:hover .tooltip-content:not(.no-hover) {
+	opacity: 1;
+	visibility: visible;
+}
+
+// Arrow styling
+.arrow {
+	position: absolute;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: $color-content;
+	color: #ffffff;
+}
+
+// Positioning for tooltip and arrow in different directions
+.tooltip-content-top {
+	bottom: 100%;
+}
+
+.arrow-top {
+	top: 100%;
+}
+
+.tooltip-content-bottom {
+	top: 100%;
+}
+
+.arrow-bottom {
+	top: 0%;
+}
+
+.tooltip-content-left {
+	left: 0%;
+	top: 50%;
+	transform: translate(-100%, -50%);
+}
+
+.arrow-left {
+	top: 50%;
+	left: 100%;
+}
+
+.tooltip-content-right {
+	margin-left: 6px;
+	top: 50%;
+	left: calc(100%);
+	transform: translateY(-50%);
+}
+
+.arrow-right {
+
+	top: 50%;
+	left: -5px;
+	transform: translateY(-50%) rotate(45deg);
+	border-right-color: $color-content;
+}
+
+
+//TODO ДОПОЛНИТЕЛЬНО ПОЗИЦИОНИРОВАНИЕ
+.tooltip-content-left-top {
+	top: calc(0% + 6px);
+	// left: calc(-100% - 12px);
+	// transform: translateX(-200%);
+}
+
+.arrow-left-top {
+	top: 25%;
+	left: 100%;
+}
+
+
+
+
+.tooltip-content-right-top {
+	top: calc(0% + 6px);
+	left: calc(100% + 6px);
+	transform: translateY(0%);
+}
+
+.arrow-right-top {
+	top: 25%;
+	left: -4px;
+	transform: translateY(-50%) rotate(45deg);
+	border-right-color: $color-content;
+}
+
+
+// Show and hide utilities
+.show {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .2s ease, visibility .2s ease;
+}
+
+.show:hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+.hide {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease, visibility .2s ease;
+}
+
+.hide:hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+// // Variables color
+// $color-content: #FF8C00;
+
+// .tooltip {
+// 	display: inline-block;
+// 	position: relative;
+// 	padding: 7px;
+
+// 	//* КОНТЕЙНЕР С СООБЩЕНИЕМ
+// 	.tooltip-content {
+// 		padding: 8px;
+// 		position: absolute;
+// 		width: 400px;
+// 		left: 50%;
+// 		color: #ffffff;
+// 		background: $color-content;
+// 		font-weight: 500;
+// 		font-size: 18px;
+// 		border-radius: 6px;
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		z-index: 1;
+// 		transform: translateX(-50%);
+// 		transition: opacity .2s ease, visibility .2s ease;
+// 	}
+
+// 	&:hover .tooltip-content:not(.no-hover) {
+// 		opacity: 1;
+// 		visibility: visible;
+// 	}
+
+// 	//* СТРЕЛКА
+// 	.arrow {
+// 		position: absolute;
+// 		left: 50%;
+// 		width: 10px;
+// 		height: 10px;
+// 		transform: translate(-50%, -50%) rotate(45deg);
+// 		background: $color-content;
+// 		color: #ffffff;
+// 	}
+
+// 	// Tooltip сверху
+// 	.tooltip-content-top {
+// 		bottom: 100%;
+// 	}
+
+// 	.arrow.arrow-top {
+// 		top: 100%;
+// 	}
+
+// 	// Tooltip снизу
+// 	.tooltip-content-bottom {
+// 		top: 100%;
+// 	}
+
+// 	.arrow.arrow-bottom {
+// 		top: 0%;
+// 	}
+
+// 	// Tooltip слева
+// 	.tooltip-content-left {
+// 		left: 0%;
+// 		top: 50%;
+// 		transform: translate(-100%, -50%);
+// 	}
+
+// 	.arrow.arrow-left {
+// 		top: 50%;
+// 		left: 100%;
+// 	}
+
+// 	// Tooltip справа
+// 	.tooltip-content-right {
+// 		top: 50%;
+// 		left: calc(100%);
+// 		transform: translateY(-50%);
+// 	}
+
+// 	.arrow.arrow-right {
+// 		top: 50%;
+// 		left: -5px;
+// 		transform: translateY(-50%) rotate(45deg);
+// 		border-right-color: $color-content;
+// 	}
+
+// 	// Показ и скрытие выпадающего меню
+// 	.show {
+// 		opacity: 1;
+// 		visibility: visible;
+// 		transition: opacity .2s ease, visibility .2s ease;
+// 	}
+
+// 	.show:hover {
+// 		opacity: 1;
+// 		visibility: visible;
+// 	}
+
+// 	.hide {
+// 		opacity: 0;
+// 		visibility: hidden;
+// 		transition: opacity .2s ease, visibility .2s ease;
+// 	}
+
+// 	.hide:hover {
+// 		opacity: 1;
+// 		visibility: visible;
+// 	}
+
+// }
